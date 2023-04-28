@@ -1,3 +1,6 @@
+package com.thomas.introduction;
+
+@SuppressWarnings("unused")
 class Circle {
     private double radius;
 

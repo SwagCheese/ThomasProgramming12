@@ -1,3 +1,5 @@
+package com.thomas.introduction;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;

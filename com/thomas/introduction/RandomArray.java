@@ -1,3 +1,5 @@
+package com.thomas.introduction;
+
 import java.util.Random;
 
 class RandomArray {
