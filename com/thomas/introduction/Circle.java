@@ -4,7 +4,7 @@ package com.thomas.introduction;
 class Circle {
     private double radius;
 
-    Circle() {
+    public Circle() {
         // I guess just do a random radius if they don't supply one
         radius = Math.random();
     }
@@ -29,7 +29,6 @@ class Circle {
         return 2 * Math.PI * radius;
     }
     
-    @Override
     public String toString() {
         return "Circle[radius=" + radius + "]";
     }

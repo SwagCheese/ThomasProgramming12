@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 class HappyOrSad {
     public static void main(String[] args) {
         try {
+            //noinspection SpellCheckingInspection
             File file = new File(Objects.requireNonNull(HappyOrSad.class.getResource("happyorsad.txt")).toURI());
             Scanner scanner = new Scanner(file);
 
