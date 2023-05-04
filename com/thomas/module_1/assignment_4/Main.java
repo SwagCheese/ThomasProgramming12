@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        @SuppressWarnings("DuplicatedCode") List<TwoDShape> shapes = new ArrayList<>();
+        List<TwoDShape> shapes = new ArrayList<>();
 
         shapes.add(new Circle(10, Colour.GREEN)); // Green circle with radius 10
         shapes.add(new Triangle(5, 10, Colour.BLUE)); // Blue triangle with width 5 and height 10

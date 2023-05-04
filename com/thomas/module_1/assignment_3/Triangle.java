@@ -65,7 +65,7 @@ public class Triangle extends TwoDShape implements Rotate {
 
     @Override
     public void rotate90() {
-        rotate(180);
+        rotate(90);
     }
 
     @Override

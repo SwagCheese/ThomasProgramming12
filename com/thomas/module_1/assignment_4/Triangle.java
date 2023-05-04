@@ -161,7 +161,6 @@ public class Triangle extends TwoDShape implements Rotate {
     }
 
     /**
-
      Rotates the triangle by 90 degrees.
      */
     @Override
