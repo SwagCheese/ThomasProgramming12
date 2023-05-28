@@ -1,0 +1,38 @@
+.root {
+    -fx-background-color: #f0f0f0; /* Sets the background color of the root element */
+}
+
+.label {
+    -fx-font-size: 14px; /* Sets the font size for labels */
+    -fx-padding: 5px; /*Adds padding to labels */
+}
+
+.text-field {
+    -fx-font-size: 14px; /* Sets the font size for text fields */
+    -fx-pref-width: 200px; /* Sets the preferred width for text fields */
+    -fx-padding: 5px; /* Adds padding to text fields */
+}
+
+.button {
+    -fx-font-size: 14px; /* Sets the font size for buttons */
+    -fx-padding: 8px 16px; /* Adds padding to buttons */
+    -fx-background-color: #4caf50; /* Sets the background color of buttons */
+    -fx-text-fill: white; /* Sets the text color of buttons */
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Sets the background color of buttons on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #3c903c; /* Sets the background color of buttons when pressed */
+}
+
+#userIcon,
+#passwordIcon {
+    -fx-padding: 0 5px; /* Adds padding to userIcon and passwordIcon */
+}
+
+#usernameExistsMessage {
+    -fx-text-fill: red; /* Sets the text color of usernameExistsMessage to red */
+}

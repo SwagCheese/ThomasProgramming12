@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat May 27 19:39:54 PDT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0188-603a-02d0-00000f1d5be0 
+on database directory /home/bob/programming/java/VLN/com/thomas/module_5/login/database/forum with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3af49f1c 
+Loaded from file:/home/bob/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=20.0.1+9-29
+user.dir=/home/bob/programming/java/VLN/com/thomas/module_5/login
+os.name=Linux
+os.arch=amd64
+os.version=6.3.4-zen1-1-zen
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<!-- The StackPane container serves as the root element -->
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.thomas.login.LoginController" stylesheets="@styles.css">
+    <!-- The VBox container holds the user interface components vertically -->
+    <VBox spacing="10" alignment="CENTER">
+        <!-- HBox for the username field -->
+        <HBox alignment="CENTER">
+            <!-- ImageView to display the user icon -->
+            <ImageView id="userIcon" fitHeight="20" fitWidth="20">
+                <Image url="@users.png" />
+            </ImageView>
+            <!-- Label for the username field -->
+            <Label text="Username:" />
+            <!-- TextField for entering the username -->
+            <TextField fx:id="user" promptText="Use &quot;username&quot; to login" />
+        </HBox>
+        <!-- HBox for the password field -->
+        <HBox alignment="CENTER">
+            <!-- ImageView to display the password icon -->
+            <ImageView id="passwordIcon" fitHeight="20" fitWidth="20">
+                <Image url="@password.png" />
+            </ImageView>
+            <!-- Label for the password field -->
+            <Label text="Password:" />
+            <!-- PasswordField for entering the password -->
+            <PasswordField fx:id="password" promptText="Use &quot;password&quot; to login" />
+        </HBox>
+        <!-- HBox for displaying a login failure message -->
+        <HBox alignment="CENTER">
+            <!-- Label for displaying the login failure message -->
+            <Label id="loginFailMessage" fx:id="loginFailMessage" text="Login failed! Incorrect username or password." visible="false" />
+        </HBox>
+        <!-- Button for initiating the login process -->
+        <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" text="Login" />
+    </VBox>
+</StackPane>
