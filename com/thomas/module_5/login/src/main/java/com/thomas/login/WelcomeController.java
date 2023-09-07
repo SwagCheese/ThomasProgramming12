@@ -1,6 +1,5 @@
 package com.thomas.login;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,7 +15,8 @@ import java.util.logging.Logger;
  */
 public class WelcomeController {
     @FXML private Button logoutButton;
-    @FXML private Label sessionLabel;
+    @FXML private Label sessionIDField;
+    @FXML private Label usernameField;
 
     public void initialize() {}
 
@@ -25,18 +25,18 @@ public class WelcomeController {
      * @param loginManager The LoginManager responsible for managing the login process.
      * @param sessionID The ID of the current session.
      */
-    public void initSessionID(final LoginManager loginManager, String sessionID) {
-        sessionLabel.setText(sessionID);
+    public void initSessionID(final LoginManager loginManager, String sessionID, String username) {
+        this.sessionIDField.setText("Session ID: " + sessionID);
+        usernameField.setText("Welcome, " + username + "!");
         logoutButton.setOnAction(event -> loginManager.logout());
     }
 
     /**
      * Opens the Add User popup window when the Add User button is clicked.
      * Loads the FXML file for the popup window and displays it in a new Stage.
-     * @param event The ActionEvent triggered by the Add User button.
      */
     @FXML
-    public void openAddUserPopup(ActionEvent event) {
+    public void openAddUserPopup() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/addUserPopup.fxml"));
             Stage popup = new Stage();

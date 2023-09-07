@@ -25,7 +25,7 @@ public class LoginController {
             String sessionID = authorize();
             if (sessionID != null) {
                 loginFailMessage.setVisible(false);
-                loginManager.authenticated(sessionID);
+                loginManager.authenticated(sessionID, user.getText());
             } else {
                 loginFailMessage.setVisible(true);
             }

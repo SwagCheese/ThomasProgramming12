@@ -5,42 +5,36 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<!-- The StackPane container serves as the root element -->
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Line?>
 <StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.thomas.login.AddUserController"
-           stylesheets="@styles.css">
-    <!-- The VBox container holds the user interface components vertically -->
-    <VBox spacing="10" alignment="CENTER">
-        <!-- HBox for the username field -->
-        <HBox alignment="CENTER">
-            <!-- ImageView to display the user icon -->
-            <ImageView id="userIcon" fitHeight="20" fitWidth="20">
-                <Image url="@users.png"/>
-            </ImageView>
-            <!-- Label for the username field -->
-            <Label text="Username:"/>
-            <!-- TextField for entering the username -->
-            <TextField fx:id="user"/>
-        </HBox>
-        <!-- HBox for the password field -->
-        <HBox alignment="CENTER">
-            <!-- ImageView to display the password icon -->
-            <ImageView id="passwordIcon" fitHeight="20" fitWidth="20">
-                <Image url="@password.png"/>
-            </ImageView>
-            <!-- Label for the password field -->
-            <Label text="Password:"/>
-            <!-- PasswordField for entering the password -->
-            <PasswordField fx:id="password"/>
-        </HBox>
-        <!-- HBox for displaying a message when the username already exists -->
-        <HBox alignment="CENTER">
-            <!-- Label for displaying the username exists message -->
-            <Label id="usernameExistsMessage" fx:id="usernameExistsMessage"
+           stylesheets="@styles.css" prefWidth="600" prefHeight="400">
+        <VBox spacing="10" alignment="CENTER">
+            <Text>Add a new user by entering their desired username and password below</Text>
+            <Text>You will then be able to use this username and password to login</Text>
+            <Line/>
+            <HBox alignment="CENTER">
+                <ImageView id="userIcon" fitHeight="20" fitWidth="20">
+                    <Image url="@users.png"/>
+                </ImageView>
+                <Label text="Username:"/>
+                <TextField fx:id="user"/>
+            </HBox>
+
+            <HBox alignment="CENTER">
+                <ImageView id="passwordIcon" fitHeight="20" fitWidth="20">
+                    <Image url="@password.png"/>
+                </ImageView>
+                <Label text="Password:"/>
+                <PasswordField fx:id="password"/>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Label id="usernameExistsMessage" fx:id="usernameExistsMessage"
                    text="Failed to add user to database! Username already exists." visible="false"/>
-        </HBox>
-        <!-- Button for adding a user -->
-        <Button mnemonicParsing="false" text="Add User" onAction="#AddUser" alignment="CENTER"/>
-        <!-- Button for closing the window -->
-        <Button fx:id="closeButton" mnemonicParsing="false" text="Close" onAction="#close" alignment="CENTER"/>
-    </VBox>
+            </HBox>
+            <HBox alignment="CENTER" spacing="50">
+                <Button mnemonicParsing="false" text="Add User" onAction="#AddUser" alignment="CENTER"/>
+                <Button fx:id="closeButton" mnemonicParsing="false" text="Close" onAction="#close" alignment="CENTER"/>
+            </HBox>
+        </VBox>
 </StackPane>

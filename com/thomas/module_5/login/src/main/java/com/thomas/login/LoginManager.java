@@ -20,8 +20,8 @@ public class LoginManager {
      * Displays the main application screen.
      * @param sessionID The ID of the authenticated session.
      */
-    public void authenticated(String sessionID) {
-        showWelcomeView(sessionID);
+    public void authenticated(String sessionID, String username) {
+        showWelcomeView(sessionID, username);
     }
 
     /**
@@ -50,12 +50,12 @@ public class LoginManager {
      * Shows the welcome screen of the main application by loading the corresponding FXML file.
      * @param sessionID The ID of the authenticated session.
      */
-    private void showWelcomeView(String sessionID) {
+    private void showWelcomeView(String sessionID, String username) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/welcome.fxml"));
             scene.setRoot(loader.load());
             WelcomeController controller = loader.getController();
-            controller.initSessionID(this, sessionID);
+            controller.initSessionID(this, sessionID, username);
         } catch (IOException ex) {
             Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
         }
